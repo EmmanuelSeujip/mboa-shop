@@ -1,0 +1,23 @@
+.authentication{
+  height: 100vh;
+  width: 100%;
+  background-image: url('/assets/images/illustration-abstraite-visages-griffonnes.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  }
+  .authentication-card{
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 0.8);
+    width: 450px;
+  }
