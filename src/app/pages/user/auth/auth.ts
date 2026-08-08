@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Sign } from "../../../components/user/auth/sign/sign";
+import { Sign } from './sign/sign';
 
 @Component({
   selector: 'app-auth',

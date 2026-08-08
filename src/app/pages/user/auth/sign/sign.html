@@ -1,0 +1,43 @@
+<section class="w-100 h-100 p-4">
+  <h2  class="text-primary text-center">Mboa Shop</h2>
+  <h4 class="mb-4">Creer votre compte</h4>
+  <form (ngSubmit)="soumettre()" class="d-flex flex-column gap-4" [formGroup]="signForm">
+    <div class="field">
+      <label>Nom d'utilisateur</label>
+      <input type="text" name="username" placeholder="Entrez votre nom d'utilisateur" formControlName="username">
+    </div>
+    <div class="field">
+      <label>Adresse email</label>
+      <input type="email" name="email" placeholder="Entrez votre email" formControlName="email">
+    </div>
+    <div class="field">
+      <label>Mot de passe</label>
+      <input type="password" name="password" placeholder="Entrez votre mot de passe" formControlName="password">
+      @if (password) {
+        <div class="text-danger">
+          Vous devez avoir au moins 
+          @if(!hasUpperCase())  {<span> une majuscule ,</span>}
+          @if(!hasNumber())  {<span> un chiffre ,</span>}
+          @if(!hasSpecialChar())  {<span> un caractère spéciale ,</span>}  
+          @if(!hasLowerCase())  {<span> une minuscule ,</span>}  
+        </div>
+      }
+    </div>
+    
+
+    <div class="field">
+      <label>Confirmer le mot de passe</label>
+      <input type="password" name="password" placeholder="Confirmer votre mot de passe" formControlName="confirmPassword">
+    </div>
+    <button class="btn btn-primary border-primary bg-primary" [disabled]="signForm.invalid">Creer mon compte</button>
+  </form>
+  <div class="or">
+    <div class="line"></div>
+    ou
+    <div class="line"></div>
+  </div>
+  <div class="google-connect">
+    <img src="/assets/images/google-icon-logo-svgrepo-com.svg" alt="">
+    Se connecter avec google
+  </div>
+</section>
