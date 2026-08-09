@@ -1,0 +1,55 @@
+<div class="product-card group">
+  <div class="product-card__media">
+    <img
+      [src]="product.image"
+      [alt]="product.name"
+      class="product-card__image"
+    />
+
+    @if (badge) {
+      <span class="product-card__badge">{{ badge }}</span>
+    }
+
+    <button
+      type="button"
+      class="product-card__favorite"
+      [class.is-active]="isFavorite"
+      [attr.aria-label]="'Ajouter ' + product.name + ' aux favoris'"
+      (click)="onToggleFavorite($event)"
+    >
+      <span class="material-symbols-outlined">favorite</span>
+    </button>
+
+    <div class="product-card__cart-overlay">
+      <button
+        type="button"
+        class="btn btn-primary w-100 d-flex align-items-center justify-content-center"
+        (click)="onAddToCart($event)"
+      >
+        <span class="material-symbols-outlined me-2 fs-6">add_shopping_cart</span>
+        Ajouter au panier
+      </button>
+    </div>
+  </div>
+
+  <div class="product-card__info">
+    <div class="d-flex justify-content-between align-items-start mb-1">
+      <h3 class="product-card__name" [title]="product.name">{{ product.name }}</h3>
+      <span class="product-card__price">{{ product.price | currency:'XAF':'symbol':'1.0-0' }}</span>
+    </div>
+
+    <p class="product-card__short">{{ product.short }}</p>
+
+    <div class="product-card__rating">
+      @for (star of [].constructor(fullStars); track $index) {
+        <span class="material-symbols-outlined filled">star</span>
+      }
+      @if (hasHalfStar) {
+        <span class="material-symbols-outlined filled">star_half</span>
+      }
+      @for (star of [].constructor(emptyStars); track $index) {
+        <span class="material-symbols-outlined">star</span>
+      }
+    </div>
+  </div>
+</div>

@@ -6,4 +6,16 @@
       <span class="material-symbols-outlined">arrow_forward_ios</span>
     </div>
   </div>
+<div class="row row-cols-2 row-cols-md-4 g-4">
+  @for (product of products(); track product.id) {
+    <div class="col">
+      <app-product-card
+        [product]="product"
+        [badge]="product.short === 'Handmade' ? 'Handmade' : undefined"
+        (addToCart)="onAddToCart($event)"
+        (toggleFavorite)="onToggleFavorite($event)"
+      />
+    </div>
+  }
+</div>
 </section>
