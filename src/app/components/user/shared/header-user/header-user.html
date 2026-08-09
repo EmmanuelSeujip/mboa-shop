@@ -1,7 +1,9 @@
-<nav class="navbar navbar-expand-lg sticky-top position-fixed w-100" appOverlapDetector   [headerId]="'main-header'"
-  [heroId]="'hero-section'" id="main-header" >
+<nav class="navbar navbar-expand-lg sticky-top position-fixed w-100"
+     appOverlapDetector   
+     [headerId]="'main-header'"
+     [heroId]="'hero-section'" id="main-header" >
   <div class="navbar-brand-wrapper">
-    <a href="#" class="brand">
+    <a href="#" class="brand h5 text-primary text-decoration-none">
       Mboa Shop
     </a>
   </div>
@@ -12,7 +14,7 @@
   </button>
 
   <!-- Collapsible content -->
-  <div class="navbar-collapse-custom" [class.open]="isMenuOpen">
+  <div class="navbar-collapse-custom " [class.open]="isMenuOpen">
     <div class="nav-links">
       <a href="#" class="nav-link-custom">Home</a>
       <a href="#" class="nav-link-custom">Collection</a>
@@ -21,12 +23,10 @@
     </div>
 
     <div class="nav-actions">
-      <div class="search-box">
-        <span class="material-symbols-outlined">search</span>
-        <input type="text" placeholder="search...">
-      </div>
-
       <div class="nav-icons">
+        <div class="icon-btn">
+          <span class="material-symbols-outlined">search</span>
+        </div>
         <div class="icon-btn">
           <span class="material-symbols-outlined">notifications</span>
           <span class="badge-dot"></span>
