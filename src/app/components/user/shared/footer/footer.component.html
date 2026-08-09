@@ -1,0 +1,127 @@
+<footer class="mboa-footer">
+  <div class="container">
+    <div class="row gy-5 py-5">
+      <!-- Marque + contact -->
+      <div class="col-12 col-lg-4">
+        <a routerLink="/" class="mboa-footer__brand">
+          <span class="material-icons mboa-footer__brand-icon" aria-hidden="true">storefront</span>
+          <span class="mboa-footer__brand-name">Mboa<span>Shop</span></span>
+        </a>
+
+        <p class="mboa-footer__tagline">
+          L'artisanat, la mode et les saveurs d'Afrique, sélectionnés avec soin et livrés jusqu'à votre porte.
+        </p>
+
+        <ul class="mboa-footer__contact">
+          <li>
+            <a href="tel:+237600000000">
+              <span class="material-icons" aria-hidden="true">call</span>
+              +237 6 00 00 00 00
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/237600000000" target="_blank" rel="noopener">
+              <span class="material-icons" aria-hidden="true">chat</span>
+              Discuter sur WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contact&#64;mboashop.cm">
+              <span class="material-icons" aria-hidden="true">mail</span>
+              contact&#64;mboashop.cm
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Boutique -->
+      <div class="col-6 col-lg-2">
+        <h2 class="mboa-footer__heading">Boutique</h2>
+        <ul class="mboa-footer__links">
+          <li><a routerLink="/produits/vetements">Vêtements</a></li>
+          <li><a routerLink="/produits/artisanat">Artisanat</a></li>
+          <li><a routerLink="/produits/epicerie">Épicerie fine</a></li>
+          <li><a routerLink="/produits/nouveautes">Nouveautés</a></li>
+          <li><a routerLink="/produits/promotions">Promotions</a></li>
+        </ul>
+      </div>
+
+      <!-- Aide -->
+      <div class="col-6 col-lg-2">
+        <h2 class="mboa-footer__heading">Aide</h2>
+        <ul class="mboa-footer__links">
+          <li><a routerLink="/aide/commande">Suivre ma commande</a></li>
+          <li><a routerLink="/aide/livraison">Livraison</a></li>
+          <li><a routerLink="/aide/retours">Retours &amp; échanges</a></li>
+          <li><a routerLink="/aide/paiement">Moyens de paiement</a></li>
+          <li><a routerLink="/aide/faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter + paiements -->
+      <div class="col-12 col-lg-4">
+        <h2 class="mboa-footer__heading">Restez informé</h2>
+        <p class="mboa-footer__tagline mboa-footer__tagline--tight">
+          Nouveautés, offres et arrivages, directement dans votre boîte mail.
+        </p>
+
+        <form
+          class="mboa-footer__newsletter"
+          #newsletterForm="ngForm"
+          (ngSubmit)="onSubscribe(newsletterForm)"
+          novalidate
+        >
+          <div class="input-group">
+            <label for="footer-email" class="visually-hidden">Adresse e-mail</label>
+            <input
+              id="footer-email"
+              type="email"
+              class="form-control"
+              name="email"
+              placeholder="Votre adresse e-mail"
+              [(ngModel)]="newsletterEmail"
+              required
+              email
+            />
+            <button class="btn mboa-footer__subscribe-btn" type="submit" aria-label="S'inscrire">
+              <span class="material-icons" aria-hidden="true">send</span>
+            </button>
+          </div>
+          <p class="mboa-footer__confirm" role="status" *ngIf="subscribed">
+            <span class="material-icons" aria-hidden="true">check_circle</span>
+            Merci ! Vous êtes inscrit à la newsletter.
+          </p>
+        </form>
+
+        <div class="mboa-footer__payments">
+          <span class="mboa-footer__payments-label">Paiement sécurisé</span>
+          <div class="mboa-footer__payments-badges">
+            <span class="mboa-footer__badge">Orange Money</span>
+            <span class="mboa-footer__badge">MTN MoMo</span>
+            <span class="mboa-footer__badge mboa-footer__badge--icon">
+              <span class="material-icons" aria-hidden="true">credit_card</span>
+              Carte bancaire
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="mboa-footer__divider" />
+
+    <div class="row py-3 align-items-center">
+      <div class="col-12 col-md-6">
+        <p class="mboa-footer__copy">
+          &copy; {{ currentYear }} Mboa Shop.
+        </p>
+      </div>
+      <div class="col-12 col-md-6">
+        <ul class="mboa-footer__legal">
+          <li><a routerLink="/mentions-legales">Mentions légales</a></li>
+          <li><a routerLink="/confidentialite">Confidentialité</a></li>
+          <li><a routerLink="/cgv">CGV</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

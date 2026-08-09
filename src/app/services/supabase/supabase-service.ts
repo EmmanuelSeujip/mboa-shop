@@ -13,6 +13,8 @@ export class SupabaseService {
       environment.supabaseUrl,
       environment.supabaseKey
     );
+    console.log('URL:', environment.supabaseUrl);
+    console.log('Key:', environment.supabaseKey);
   }
 
   get client(): SupabaseClient {

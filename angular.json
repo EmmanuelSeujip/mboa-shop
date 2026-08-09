@@ -31,7 +31,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",

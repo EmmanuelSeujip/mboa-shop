@@ -1,0 +1,255 @@
+.mboa-footer {
+  position: relative;
+  background-color: var(--primary);
+  color: white !important;
+}
+.mboa-footer *{
+  color: white !important;
+}
+/* Signature : bande tissée façon kente, en écho aux motifs textiles vendus sur le site */
+.mboa-footer__pattern {
+  height: 6px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--secondary) 0px,
+    var(--secondary) 8px,
+    var(--tertiary) 8px,
+    var(--tertiary) 16px,
+    var(--primary-fixed) 16px,
+    var(--primary-fixed) 24px,
+    var(--surface-container-lowest) 24px,
+    var(--surface-container-lowest) 32px
+  );
+}
+
+.mboa-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.mboa-footer__brand-icon {
+  color: var(--primary-fixed);
+  font-size: 1.75rem;
+}
+
+.mboa-footer__brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.mboa-footer__brand-name span {
+  color: var(--primary-fixed);
+  font-weight: 500;
+}
+
+.mboa-footer__tagline {
+  color: var(--primary-fixed);
+  opacity: 0.85;
+  max-width: 32rem;
+  margin-bottom: 1.25rem;
+}
+
+.mboa-footer__tagline--tight {
+  margin-bottom: 1rem;
+}
+
+.mboa-footer__contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.mboa-footer__contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+.mboa-footer__contact a .material-icons {
+  font-size: 1.1rem;
+  color: var(--primary-fixed);
+}
+
+.mboa-footer__contact a:hover,
+.mboa-footer__contact a:focus-visible {
+  color: var(--secondary-fixed);
+}
+
+.mboa-footer__heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-fixed);
+  margin-bottom: 1.1rem;
+}
+
+.mboa-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.mboa-footer__links a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  opacity: 0.9;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.mboa-footer__links a:hover,
+.mboa-footer__links a:focus-visible {
+  opacity: 1;
+  color: var(--secondary-fixed);
+}
+
+.mboa-footer__newsletter .input-group {
+  max-width: 24rem;
+}
+
+.mboa-footer__newsletter .form-control {
+  background-color: var(--on-primary-container);
+  border: 1px solid var(--outline-variant);
+  color: var(--on-surface);
+}
+
+.mboa-footer__newsletter .form-control::placeholder {
+  color: var(--on-surface-variant);
+}
+
+.mboa-footer__newsletter .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(139, 214, 183, 0.35);
+}
+
+.mboa-footer__subscribe-btn {
+  background-color: var(--secondary);
+  border: 1px solid var(--secondary);
+  color: var(--on-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mboa-footer__subscribe-btn .material-icons {
+  font-size: 1.2rem;
+}
+
+.mboa-footer__subscribe-btn:hover,
+.mboa-footer__subscribe-btn:focus-visible {
+  background-color: var(--secondary-container);
+  border-color: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+.mboa-footer__confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--primary-fixed);
+}
+
+.mboa-footer__confirm .material-icons {
+  font-size: 1.05rem;
+}
+
+.mboa-footer__payments {
+  margin-top: 1.75rem;
+}
+
+.mboa-footer__payments-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-fixed);
+  opacity: 0.85;
+  margin-bottom: 0.6rem;
+}
+
+.mboa-footer__payments-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mboa-footer__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--outline-variant);
+  font-size: 0.78rem;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.mboa-footer__badge .material-icons {
+  font-size: 1rem;
+  color: var(--primary-fixed);
+}
+
+.mboa-footer__divider {
+  border: none;
+  border-top: 1px solid var(--outline-variant);
+  opacity: 0.3;
+  margin: 0;
+}
+
+.mboa-footer__copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  color: var(--primary-fixed);
+  opacity: 0.85;
+  margin: 0;
+}
+
+.mboa-footer__heart {
+  font-size: 0.95rem;
+  color: var(--secondary-fixed);
+}
+
+.mboa-footer__legal {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.mboa-footer__legal a {
+  color: var(--primary-fixed);
+  opacity: 0.85;
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+
+.mboa-footer__legal a:hover,
+.mboa-footer__legal a:focus-visible {
+  opacity: 1;
+  color: var(--secondary-fixed);
+}
+
+@media (min-width: 768px) {
+  .mboa-footer__legal {
+    justify-content: flex-end;
+  }
+}
