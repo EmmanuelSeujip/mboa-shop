@@ -1,0 +1,19 @@
+.w-fit{
+  width: fit-content;
+}
+.h-fit{
+  height: fit-content;
+}
+.btn-primary {
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: var(--primary-container);
+  --bs-btn-hover-border-color: var(--primary-container);
+  --bs-btn-active-bg: var(--primary-container);
+  --bs-btn-active-border-color: var(--primary-container);
+  --bs-btn-disabled-bg: var(--primary);
+  --bs-btn-disabled-border-color: var(--primary);
+  --bs-btn-color: var(--on-primary);
+  --bs-btn-hover-color: var(--on-primary);
+  --bs-btn-active-color: var(--on-primary);
+}

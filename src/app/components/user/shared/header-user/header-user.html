@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg sticky-top position-fixed w-100"
+     appOverlapDetector   
+     [headerId]="'main-header'"
+     [heroId]="'hero-section'" id="main-header" >
+  <div class="navbar-brand-wrapper">
+    <a href="#" class="brand h5 text-primary text-decoration-none">
+      Mboa Shop
+    </a>
+  </div>
+
+  <!-- Hamburger button for mobile -->
+  <button class="navbar-toggler" type="button" (click)="toggleMenu()">
+    <span class="material-symbols-outlined">{{ isMenuOpen ? 'close' : 'menu' }}</span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="navbar-collapse-custom " [class.open]="isMenuOpen">
+    <div class="nav-links">
+      <a href="#" class="nav-link-custom">Home</a>
+      <a href="#" class="nav-link-custom">Collection</a>
+      <a href="#" class="nav-link-custom active">Category</a>
+      <a href="#" class="nav-link-custom">Deal</a>
+    </div>
+
+    <div class="nav-actions">
+      <div class="nav-icons">
+        <div class="icon-btn">
+          <span class="material-symbols-outlined">search</span>
+        </div>
+        <div class="icon-btn">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="badge-dot"></span>
+        </div>
+
+        <div class="icon-btn" data-bs-toggle="offcanvas" data-bs-target="#panierModal">
+          <span class="material-symbols-outlined">shopping_cart</span>
+          <span class="badge-dot"></span>
+        </div>
+
+        <div class="icon-btn">
+          <span class="material-symbols-outlined">person</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+

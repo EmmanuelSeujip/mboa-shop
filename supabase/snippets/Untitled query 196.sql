@@ -1,0 +1,1 @@
+grant select on public.product to anon, authenticated;

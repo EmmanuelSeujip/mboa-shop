@@ -44,3 +44,7 @@ __screenshots__/
 Thumbs.db
 .vscode
 .angular
+
+environments
+
+backup_data.sql

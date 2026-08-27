@@ -1,0 +1,20 @@
+.is-overlapping {
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+  }
+
+  .is-overlapping .navbar-toggler {
+    color: white !important;
+  }
+
+  .is-overlapping .material-symbols-outlined {
+    color: white !important;
+  }
+
+  .is-overlapping .nav-link-custom{
+    color: white !important;
+  }
+  .is-overlapping .search-box {
+    display: none !important;
+  }
