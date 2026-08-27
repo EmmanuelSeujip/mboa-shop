@@ -3,7 +3,7 @@
      [headerId]="'main-header'"
      [heroId]="'hero-section'" id="main-header" >
   <div class="navbar-brand-wrapper">
-    <a href="#" class="brand h5 text-primary text-decoration-none">
+    <a routerLink="/" class="brand h5 text-primary text-decoration-none">
       Mboa Shop
     </a>
   </div>
@@ -16,9 +16,9 @@
   <!-- Collapsible content -->
   <div class="navbar-collapse-custom " [class.open]="isMenuOpen">
     <div class="nav-links">
-      <a href="#" class="nav-link-custom">Home</a>
-      <a href="#" class="nav-link-custom">Collection</a>
-      <a href="#" class="nav-link-custom active">Category</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link-custom">Home</a>
+      <a routerLink="/collection" routerLinkActive="active" class="nav-link-custom">Collection</a>
+      <a href="#" class="nav-link-custom">Category</a>
       <a href="#" class="nav-link-custom">Deal</a>
     </div>
 
@@ -37,9 +37,9 @@
           <span class="badge-dot"></span>
         </div>
 
-        <div class="icon-btn">
+        <a routerLink="/auth" routerLinkActive="active" class="icon-btn text-decoration-none">
           <span class="material-symbols-outlined">person</span>
-        </div>
+        </a>
       </div>
     </div>
   </div>
