@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg sticky-top position-fixed w-100"
-     appOverlapDetector   
+     appOverlapDetector
      [headerId]="'main-header'"
      [heroId]="'hero-section'" id="main-header" >
   <div class="navbar-brand-wrapper">
@@ -17,6 +17,7 @@
   <div class="navbar-collapse-custom " [class.open]="isMenuOpen">
     <div class="nav-links">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link-custom">Home</a>
+      <a routerLink="/product" routerLinkActive="active"  class="nav-link-custom">Produit</a>
       <a routerLink="/collection" routerLinkActive="active" class="nav-link-custom">Collection</a>
       <a href="#" class="nav-link-custom">Category</a>
       <a href="#" class="nav-link-custom">Deal</a>
